@@ -1,0 +1,18 @@
+(lp1
+.(lp2
+VC:\u005CNXP\u005Cbstudio_nxp\u005Cworkspace\u005CJN-AN-1216-Zigbee-3-0-IoT-ControlBridge\u005CBuild\u005CZigbeeNodeControlBridge\u005CZigbeeNodeControlBridge_JN5168_FULL_FUNC_DEVICE_115200.bin
+p3
+aVC:\u005CNXP\u005Cbstudio_nxp\u005Csdk\u005CJN-SW-4163\u005CTools\u005CJennicSniffer\u005CJennicSniffer_JN5169_1000000_HP.bin
+p4
+a.VCOM4
+p5
+.I0
+.I3
+.I00
+.(lp6
+.I00
+.I01
+.(lp7
+.S'0x00000000, 0x00000000, 0x00000000, 0x80000000'
+p8
+.

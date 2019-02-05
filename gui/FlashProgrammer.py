@@ -180,7 +180,7 @@ else:
                 self.ProgrammingConfiguration = cProgrammingConfiguration()
                 self.ProgrammingConfiguration.DeviceInfo = self.DeviceInfo
                 try:
-                    oCfgFile = open('config.txt', 'r')
+                    oCfgFile = open('config.txt', 'rb')
                     oUnpickler = pickle.Unpickler(oCfgFile)
                     self.aLHistory = oUnpickler.load()
                     self.aHistory = oUnpickler.load()
@@ -197,6 +197,7 @@ else:
                     self.bGenerateResetAndProgram = oUnpickler.load()
                     self.aS3History = oUnpickler.load()
                     self.sPassKey = oUnpickler.load()
+                    
                     oCfgFile.close()
                 except Exception as e:
                     print(e)
