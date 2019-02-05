@@ -119,6 +119,9 @@ if sys.platform[:5] == 'linux':
 
         def mShutdown(self):
             self.mClose()
+            
+        def mSetRxTimeOut(self, RxTimeOut):
+            print('mSetRxTimeOut not supported')
 
 
     class cCommDeviceOL(cCommDeviceBase):

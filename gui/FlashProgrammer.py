@@ -220,6 +220,7 @@ else:
                     self.sSector3File = ''
                     self.sPassKey = '0x00000000, 0x00000000, 0x00000000, 0x80000000'
                 else:
+#                 if True:
                     self.sDefaultKey = self.sPassKey
                     self.abEncryptKey = struct.pack('>LLLL', 0, 0, 0, 0)
                     self.abMACAddress = None
@@ -544,7 +545,7 @@ else:
             return
 
         def mSaveData(self):
-            oCfgFile = open('config.txt', 'w')
+            oCfgFile = open('config.txt', 'wb')
             oPickler = pickle.Pickler(oCfgFile)
             oPickler.dump(self.aLHistory)
             oPickler.dump(self.aHistory)
@@ -640,7 +641,7 @@ else:
             self.mSaveData()
             if self.oZsa is not None:
                 del self.oZsa
-            self.MakeModal(False)
+#             self.MakeModal(False)
             self.Destroy()
             return
 

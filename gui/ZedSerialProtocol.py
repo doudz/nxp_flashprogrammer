@@ -5,7 +5,7 @@
 # Embedded file name: ZedSerialProtocol.pyo
 # Compiled at: 2010-10-07 11:23:32
 import sys
-if sys.platform[:-1] == 'linux':
+if sys.platform[:5] == 'linux':
     import CommDevicePosix as CommDevice
 else:
     if sys.platform == 'win32':
