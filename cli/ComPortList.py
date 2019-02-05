@@ -24,9 +24,9 @@ def enumerateSerialPorts(basename='\\Device\\VCP'):
 
 
 def fGetComPortList():
-    if sys.platform[:-1] == 'linux':
+    if sys.platform == 'linux':
         import string, os
-        aComPortList = [ '/dev/' + dev for dev in string.split(os.popen("ls /dev | grep 'tty[S|U]'").read()) ]
+        aComPortList = [ '/dev/' + dev for dev in os.popen("ls /dev | grep 'tty[S|U]'").read().split() ]
     else:
         aComPortList = list(enumerateSerialPorts('\\Device\\VCP'))
     return aComPortList
